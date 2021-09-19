@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Phrotons Mobility</title>
+      <!-- ------CSS ONLY------ -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,500&display=swap"> -->
+      <link href="//db.onlinewebfonts.com/c/f867300bdd5bc759c50209b13c385cb1?family=Schluber" rel="stylesheet"
+         type="text/css" />
+      <!-- <link href="FontAwesome.css" rel="stylesheet"> -->
+      <link rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <link href="/public/css/contact.css" rel="stylesheet">
+      <link href="/public/css/index.css" rel="stylesheet">
+      <link href="dm-sans-cufonfonts/DMSans-Bold.ttf" rel="stylesheet">
+      <link href="dm-sans-cufonfonts/DMSans-BoldItalic.ttf" rel="stylesheet">
+      <link href="dm-sans-cufonfonts/DMSans-Italic.ttf" rel="stylesheet">
+      <link href="dm-sans-cufonfonts/DMSans-Medium.ttf" rel="stylesheet">
+      <link href="dm-sans-cufonfonts/DMSans-MediumItalic.ttf" rel="stylesheet">
+      <link href="dm-sans-cufonfonts/DMSans-Regular.ttf" rel="stylesheet">
+      <!-- Link Swiper's CSS -->
+      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+      <!-- ------JAVASCRIPT LINKS-------- -->
+      <script src='https://kit.fontawesome.com/a076d05399.js'crossorigin="use-credentials"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+         crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <style>
+         /* .container-x .info_text {
+         text-align: center;
+         font-family: sans-serif;
+         width: 80%;
+         margin: auto;
+         margin-top: 20px;
+         } */
+
+        html {
+        overflow-x: hidden;
+        }
+
+        html,
+        body {
+        position: relative;
+        height: 100%;
+        }
+
+        body {
+        /* background: #eee; */
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+        }
+
+        @media (min-width: 991px) {
+        .wdth {
+            padding-left: 8%;
+        }
+        .hght {
+            padding-right: 8%;
+        }
+        }
+
+        .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        width: 40%;
+        height: 50%;
+        object-fit: cover;
+        }
+
+        .text1 {
+        font-size: 1.9vw;
+        line-height: 2.5vw;
+        text-align: justify;
+        }
+
+        @media (max-width: 768px) {
+        .text1 {
+            font-size: 3vw!important;
+            line-height: normal;
+        }
+        }
+
+        .image-right {
+        width: 70%;
+        height: 70%;
+        }
+
+        @media (max-width: 576px) {
+        .image-right {
+            width: 99vw;
+            height: 85%;
+        }
+        }
+
+        @media (max-width: 768px) {
+        .image-right {
+            width: 78vw;
+            height: 85%;
+        }
+        }
+
+        .leftContainer,
+        .rightContainer {
+        text-align: center;
+        }
+
+        .image-left {
+        width: 70%;
+        height: 70%;
+        }
+
+        @media (max-width: 576px) {
+        .image-left {
+            width: 99vw;
+            height: 85%;
+        }
+        }
+
+        @media (max-width: 768px) {
+        .image-left {
+            width: 78vw;
+            height: 85%;
+        }
+        }
+
+        .titleText {
+        font-family: Schluber;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 6vw;
+        line-height: 43px;
+        letter-spacing: 1.94px;
+        text-align: end;
+        margin: 7vw;
+        color: #013758;
+        padding: 4vw;
+        height: 22vw;
+        }
+
+        @media (max-width: 991px) {
+        .revertInMobile {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .row>.container {
+            width: 80% !important;
+        }
+        .text1 {
+            font-size: 4vw;
+            line-height: normal;
+        }
+        }
+      </style>
+   </head>
+   <body style="overflow-x: hidden;">
+      <!-- SECTION1 -->
+      <div id="grad1">
+         <div class="container1" style="background: #FDFAFA;">
+            <nav class="navbar navbar-expand-lg navbar-light " style=" background-color:#FDFAFA;">
+               <div class="container-fluid">
+                  <span style="margin-left: 1rem;">
+                  <a class="navbar-brand" href="/index.html"><img src="image/Logo_png.png" alt="..."></a>
+                  <a class="navbar-brand" href="/index.html"><img src="image/Logo_Text.png" alt="..."></a></span>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                     aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin: 2vw;">
+                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="color: blue!important;">
+                        <li class="nav-item">
+                           <a class="nav-link active nav1"style="color: #013758;"  aria-current="page" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link active nav1" style="color: #013758;" aria-current="page" href="/about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link active nav1" style="color: #013758;" href="/technology.html">Technology</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link active nav1"  style="color: #013758;"  href="/product.html">Product</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link active nav1" style="color: #013758;"   href="/sdg.html">SDG</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link active nav1" style="color: #013758;"  href="/views/blogHtml/articles/blog-index.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link active nav2" style="color: #013758;"   href="/contact.html">Contact</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </nav>
+            <div class="Fut"> <b>Technology</b></div>
+         </div>
+      </div>
+      <!-- SECTION2 -->
+      <div  style="background-color: white;">
+         <div  class="row revertInMobile">
+            <div class="col-lg-6 col-sm-12 container wdth" >
+               <h1 class="texting">Fuel Cell </h1>
+               <p class="text1">Hydrogen Fuel Cell generates electricity through an electrochemical reaction between stored hydrogen, and the atmospheric oxygen. The only byproduct here is clean water. Starting with heavy vehicles, Hydrogen Fuel Cell is all set to take over the majority transportation industry in the years to come. Major automobile manufacturers have openly supported this technology and vowed to switch to an all-HFC powered mobility very soon.
+            </div>
+            <div class="col-lg-6 col-sm-12 rightContainer">
+               <img  class="image-right" style="border-radius: 85px 0px 0px 85px;background-color: #FDFAFA;" src="/image/POWER_HOUSE_HFC_RENDER_4K (2).png" alt="">
+            </div>
+         </div>
+         <div  class="row ">
+            <div class="col-lg-6 col-sm-12 leftContainer">
+               <img class="image-left" style="border-radius: 0px 85px 85px 0px;background-color: #FDFAFA;" src="/image/POWER_HOUSE_POWER_CONTROLLER_RENDER_4K (2).png" alt="">
+            </div>
+            <div class="col-lg-6 col-sm-12 container hght">
+               <h1 class="texting">Power Control </h1>
+               <p class="text1">Our specifically designed Power Control unit manages the entire energy generation and storage unit. 
+               </p>
+            </div>
+         </div>
+         <div  class="row revertInMobile">
+            <div class="col-lg-6 col-sm-12 container wdth">
+               <h1 class="texting">Thermal Management</h1>
+               <p class="text1">Thermal management system developed at Phrotons Mobility ensures adequate cooling of the entire system. It can also be used independently in other electronic cooling applications. 
+               </p>
+            </div>
+            <div class="col-lg-6 col-sm-12 rightContainer">
+               <img class="image-right" style="border-radius: 85px 0px 0px 85px;background-color: #FDFAFA;" src="/image/POWER_HOUSE_COOLING_RENDER_4K (2).png" alt="">
+            </div>
+         </div>
+         <div  class="row">
+            <div class="col-lg-6 col-sm-12 leftContainer">
+               <img class="image-left" style="border-radius: 0px 85px 85px 0px;background-color: #FDFAFA;" src="/image/POWER_HOUSE_HYDROCORE_RENDER_4K (3).png" alt="">
+            </div>
+            <div class="col-6 container hght">
+               <h1 class="texting">Hydrogen Storage </h1>
+               <p class="text1">Our storage system reduces the storage volume of hydrogen by around 20 times. This serves in developing a compact assembly and hence a lighter system.
+               </p>
+            </div>
+         </div>
+         <div  class="row revertInMobile">
+            <div class="col-lg-6 col-sm-12 container wdth">
+               <h1 class="texting">Green Hydrogen</h1>
+               <p class="text1">We produce Green Hydrogen as part of the National Hydrogen Mission emphasised by PM Modi. This hydrogen fuels the cleanest energy generation systems. Hydrogen gas is generated by electrolysis of water. This electrolysis, when done using renewable energy sources, generates Green Hydrogen separating the hydrogen atom within it from its molecular twin oxygen. In simple words, our technology supports zero carbon footprints from start to finish of the fuel lifecycle. Honorable Prime Minister, Shri Narendra Modi has only strengthened the Hydrogen Power industry by promoting it in his 75th Independence Day press release. As proposed in the budget 2021, FInance Minister Smt. Nirmala Sitharaman has announced a budget of 1500 Cr for the National Hydrogen Energy Mission.. 
+               </p>
+            </div>
+            <div class="col-lg-6 col-sm-12 rightContainer">
+               <img class="image-right" style="border-radius: 85px 0px 0px 85px;background-color: #FDFAFA;" src="/image/Green hydrogen (2).png" alt="">
+            </div>
+         </div>
+      </div>
+      <br><br><br>
+      <!-- =================footer -->
+      <div
+         style="padding-bottom: 2rem;background: linear-gradient(225.52deg, #03738C 0.45%, #024873 32.22%, #012840 100.47%); ;">
+         <div class="fut">Phrotons Mobility - A Fuel Proof Plan</div>
+         <hr>
+         <div class="container">
+            <div class="row alignment">
+               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" style="color: white;padding: 3vw;">
+                  <div class="fut1" >Contact with
+                     Us
+                  </div>
+                  <br>
+                  <div style="margin: auto;">
+                     <i class="fa fa-facebook-f" style="font-size:24px    ; margin-right: 1vw;">  </i>
+                     <i class="fa fa-twitter" style="font-size:24px;    margin-right: 1vw;">  </i>
+                     <i class="fa fa-instagram" style="font-size:24px ;    margin-right: 1vw;">  </i>
+                  </div>
+               </div>
+               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 pad1">
+                  <div class="fut1" >Contact
+                     Us
+                  </div>
+                  <br>
+                  <div class="fut1">91
+                     -7875504566
+                  </div>
+                  <div class="fut1">91
+                     -9049522690
+                  </div>
+                  <br>
+                  <div class="fut1">Mail
+                     Id
+                  </div>
+                  <div class="fut1"
+                     >contact@phrotons.com
+                  </div>
+                  <div class="fut1">
+                     sales.purchase@phrotons.com
+                  </div>
+               </div>
+               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 fut2" style="padding: 3vw;">
+                  <div class="fut1"
+                     >Address</div>
+                  <div class="fut1" style="color: white;">Ground
+                     Floor, 513, Building 14 (SN 37/2/2B), Mahada Colony, Yashwant Nagar, Kharadi, Pune, Maharashtra
+                     411014
+                  </div>
+               </div>
+               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 pad">
+                  <span class="fut1">Imp
+                  inks</span><br><br>
+                  <span class="fut1"><a href="/about.html"></a>About</span> <br>
+                  <span class="fut1"><a href="/views/technology.html"></a>Technology</span> <br>
+                  <span class="fut1"> <a  href="/views/contact.html"></a> Product</span> <br>
+                  <span class="fut1"><a href="/views/contact.html"></a> SDG</span> <br>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+         AOS.init();
+      </script>
+      </script>
+   </body>
+</html>

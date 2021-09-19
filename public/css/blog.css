@@ -1,0 +1,89 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,500&display=swap'); */
+
+
+#grad1 {
+    height: 15vw;
+    background-color:#FDFAFA;
+    
+  }
+  .fut{
+font-family: Schluber;
+font-style: normal;
+font-weight: normal;
+font-size: 42px;
+line-height: 43px;
+letter-spacing: 1.94px;
+
+color: #FFFFFF;
+padding: 4vw;
+text-align: center;
+  }
+  .Fut{
+    font-family: Schluber;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 6vw;
+    line-height: 43px;
+    letter-spacing: 1.94px;
+    text-align: end;
+    margin: 7vw;
+    color:#013758;
+    padding: 4vw;
+    background-color:#FDFAFA;
+
+   
+    
+      }
+
+
+      @media (max-width: 576px){
+        .Fut {
+          font-family: Schluber;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 6vw;
+    line-height: 121px;
+    letter-spacing: 1.94px;
+    text-align: end;
+    margin: 7vw;
+    color: #013758;
+    padding: 4vw;
+    background-color: #FDFAFA;
+        }
+      }
+      .Fut1{
+        font-family: Schluber;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 4vw;
+        line-height: 43px;
+        letter-spacing: 1.94px;
+        text-align: initial;
+        margin: 3vw;
+        color:#013758;
+        padding: 4vw;
+        
+          }
+
+          .center {
+          
+            width: 50%;
+           
+          }
+
+
+
+
+.hdblog{
+    font-family: DM Sans;
+    font-style: normal;
+    /* font-weight: 500; */
+    font-size: 54px;
+    line-height: 121%;
+    /* or 65px */
+    
+    text-align: center;
+    
+    color: #013758;
+}

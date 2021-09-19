@@ -1,0 +1,201 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,500&display=swap'); */
+
+
+#grad1 {
+    height: 15vw;
+    background-color:#FDFAFA;
+    background-image: #FDFAFA;
+  }
+  .fut{
+font-family: Schluber;
+font-style: normal;
+font-weight: normal;
+font-size: 42px;
+line-height: 43px;
+letter-spacing: 1.94px;
+
+color: #FFFFFF;
+padding: 4vw;
+text-align: center;
+  }
+  .Fut{
+    font-family: Schluber;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 6vw;
+    line-height: 43px;
+    letter-spacing: 1.94px;
+    text-align: end;
+    margin: 7vw;
+    color:#013758;
+    padding: 4vw;
+    height: 22vw;
+    
+      }
+     
+
+      @media (max-width: 576px){
+        .Fut {
+          font-family: Schluber;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 6vw;
+          line-height: 139px;
+          letter-spacing: 1.94px;
+          text-align: end;
+          margin: 7vw;
+          color: #013758;
+          padding: 4vw;
+          height: 29vw;
+    
+        
+        }}
+
+
+      .Fut1{
+        font-family: Schluber;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 4vw;
+        line-height: 43px;
+        letter-spacing: 1.94px;
+        text-align: initial;
+        margin: 8vw;
+        color:#013758;
+        padding: 4vw;
+        
+          }
+
+          /* .center {
+          
+            width: 50%;
+           
+          }
+          @media (max-width: 576px){
+            .center {
+           width: 25%;
+            }
+        } */
+        .map-responsive{
+          overflow:hidden;
+          padding-bottom:50%;
+          position:relative;
+          height:0;
+      }
+      .map-responsive iframe{
+          left:0;
+          top:0;
+          height:100%;
+          width:100%;
+          position:absolute;
+      }
+
+        .fut1{
+          /* font-family: DM Sans; */
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1vw;
+          line-height: 16px;
+          letter-spacing: 1.94px;
+          color: white;
+          text-align: left;
+                }
+                @media (max-width: 576px){
+                  .fut1 {
+                    /* font-family: DM Sans; */
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 4vw;
+                    line-height: 43px;
+                    letter-spacing: 1.94px;
+                    
+                    color: white;
+                
+               text-align: center;
+              
+                  
+                  }}
+                  .hd{
+                    font-size: 2vw;
+                  }
+                  @media (max-width: 576px){
+                    .hd {
+                    font-size: 9vw;
+                
+                    
+                    }}
+                  .nav1{
+                    color: #37566B;
+                    /* font-family: DM Sans; */
+                    font-style: normal;
+                    /* font-weight: bold; */
+                    font-size: 1.4vw;
+                    line-height: 20px;
+                    /* identical to box height */
+                    letter-spacing: -0.376923px;margin-right: 3vw;
+                    
+                  }
+                  
+                  .nav2{
+                  color: white!important;
+                   
+                    font-style: normal;
+                  
+                    font-size: 1.4vw;
+                    line-height: 20px;
+                  
+                    letter-spacing: -0.376923px;
+                    margin-right: 3vw;
+                    background: #28697F;
+                    border-radius: 0px 13px 0px 0px;
+                    
+                  }
+
+                  
+.icon{
+  width:1.6vw;
+}
+
+@media (max-width: 576px){
+  .icon {
+    width:9.6vw;
+  }
+}
+
+
+.mailicon{
+  border-right-style: solid;
+                border-right-color: #02456E; border-left: #02456E; text-align: center;color: #02456E;    padding: 48px;
+}
+
+@media (max-width: 576px){
+  .mailicon {
+    border-right-color: white;
+  }
+}
+
+.phoneicon{
+  border-right-style: solid;
+                border-right-color: #02456E; border-left: #02456E; text-align: center;color: #02456E;    padding: 48px;
+}
+
+@media (max-width: 576px){
+  .phoneicon {
+    border-right-color: white;
+  }
+}
+
+.alignment{
+  text-align: left;
+  }
+  
+  @media (max-width: 576px){
+    .alignment {
+      text-align: center;
+    }
+  }
+/* Set the size of the div element that contains the map */
+
+
+ 

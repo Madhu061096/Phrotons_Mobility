@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Phrotons Mobility</title>
+      <!-- ------CSS ONLY------ -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,500&display=swap"> -->
+      <link href="//db.onlinewebfonts.com/c/f867300bdd5bc759c50209b13c385cb1?family=Schluber" rel="stylesheet"
+         type="text/css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- <link href="FontAwesome.css" rel="stylesheet"> -->
+      <link rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <link rel="stylesheet"   href="/css/index.css">
+     
+      <link href="dm-sans-cufonfonts/DMSans-Bold.ttf">
+      <link href="dm-sans-cufonfonts/DMSans-BoldItalic.ttf" >
+      <link href="dm-sans-cufonfonts/DMSans-Italic.ttf">
+      <link href="dm-sans-cufonfonts/DMSans-Medium.ttf">
+      <link href="dm-sans-cufonfonts/DMSans-MediumItalic.ttf">
+      <link href="dm-sans-cufonfonts/DMSans-Regular.ttf">
+      <!-- Link Swiper's CSS -->
+      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+      <!-- <script src='https://kit.fontawesome.com/a076d05399.js'></script> -->
+      <!-- ------JAVASCRIPT LINKS-------- -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+         crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <style>
+         /* .container-x .info_text {
+         text-align: center;
+         font-family: sans-serif;
+         width: 80%;
+         margin: auto;
+         margin-top: 20px;
+         } */
+         html,
+         body {
+         position: relative;
+         height: 100%;
+         }
+
+         body {
+         /* background: #eee; */
+         font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+         font-size: 14px;
+         color: #000;
+         margin: 0;
+         padding: 0;
+         }
+
+         .swiper {
+         width: 62%;
+         padding-top: 50px;
+         padding-bottom: 50px;
+         }
+
+         @media (max-width: 576px) {
+         .swiper {
+            width: 83%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+         }
+         }
+
+         .swiper-slide {
+         background-position: center;
+         background-size: cover;
+         width: 300px;
+         height: 300px;
+         }
+
+         .swiper-slide img {
+         display: block;
+         width: 100%;
+         }
+
+         .card {
+         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+         transition: 0.3s;
+         width: 40%;
+         height: 50%;
+         object-fit: cover;
+         background-color: white;
+         }
+
+
+         /*flipper css starts here*/
+
+         .flipperImg {
+         width: 100%;
+         background-color: #C5E9FF;
+         border-radius: 25px 25px 0px 0px;
+         }
+
+         .flipperText {
+         padding: 16px;
+         font-family: DM Sans;
+         font-style: normal;
+         font-size: 2vw;
+         line-height: 23px;
+         letter-spacing: -0.603077px;
+         color: #0367A6;
+         }
+
+         @media (max-width: 576px) {
+         .flipperText {
+            font-family: DM Sans;
+            font-style: normal;
+            font-size: 7.3vw;
+            line-height: 23px;
+            letter-spacing: -0.603077px;
+            color: #0367A6;
+         }
+         }
+
+         .flip-card {
+         background-color: transparent;
+         width: 100%;
+         height: 27vw;
+         /* border: 1px solid #f1f1f1; */
+         perspective: 1000px;
+         /* Remove this if you don't want the 3D effect */
+         }
+
+
+         /* This container is needed to position the front and back side */
+
+         .flip-card-inner {
+         position: relative;
+         width: 100%;
+         height: 100%;
+         text-align: center;
+         transition: transform 0.8s;
+         transform-style: preserve-3d;
+         }
+
+
+         /* Do an horizontal flip when you move the mouse over the flip box container */
+
+         .flip-card:hover .flip-card-inner {
+         transform: rotateY(180deg);
+         }
+
+
+         /* Position the front and back side */
+
+         .flip-card-front,
+         .flip-card-back {
+         position: absolute;
+         width: 100%;
+         height: 27vw;
+         -webkit-backface-visibility: hidden;
+         /* Safari */
+         backface-visibility: hidden;
+         }
+
+
+         /* Style the front side (fallback if image is missing) */
+
+         .flip-card-front {
+         background-color: #fff;
+         color: black;
+         border-radius: 25px;
+         }
+
+
+         /* Style the back side */
+
+         .flip-card-back {
+         background-color: rgba(77, 111, 122, 0.7);
+         transform: rotateY( 180deg);
+         border-radius: 25px;
+         /* text-align: center; */
+         /* align-items: center; */
+         padding: 4vw;
+         font-family: DM Sans;
+         font-style: italic;
+         font-weight: 500;
+         font-size: 1.02vw;
+         line-height: 2vw;
+         letter-spacing: 0.396923px;
+         color: #FFFFFF;
+         width: 100%;
+         height: 27vw;
+         }
+
+         @media (max-width: 576px) {
+         .flip-card-back {
+            background-color: rgba(77, 111, 122, 0.7);
+            transform: rotateY( 180deg);
+            border-radius: 25px;
+            text-align: center;
+            align-items: center;
+            padding: 4vw;
+            font-family: DM Sans;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 4.8vw;
+            line-height: 8vw;
+            letter-spacing: 0.396923px;
+            color: #FFFFFF;
+            width: 100%;
+            height: 85vw;
+         }
+         }
+
+         @media (max-width: 576px) {
+         .flip-card {
+            background-color: transparent;
+            width: 100%;
+            height: 100vw;
+         }
+         .containerText {
+            background: #fff;
+            background: #fff;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+         }
+         }
+
+         .card {
+         background-color: transparent;
+         box-shadow: none!important;
+         border: none;
+         margin: auto;
+         }
+
+         @media (min-width: 576px) and (max-width: 991px) {
+         .flip-card {
+            height: 80vw;
+         }
+         .flipperText {
+            font-size: 4vw;
+         }
+         .flip-card-back {
+            font-size: 3.5vw;
+            line-height: 6vw;
+            height: 70vw;
+         }
+         .containerText {
+            background: #fff;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+         }
+         }
+
+         .swiper-slide-prev{
+            transform: translate3d(0px, 0px, -200px) rotateX(0deg) rotateY(60deg) scale(0.8) !important;
+         }
+         .swiper-slide-next{
+            transform: translate3d(0px, 0px, -180px) rotateX(0deg) rotateY(-60deg) scale(0.8) !important;
+         }
+
+         .overlay {
+            position: absolute;
+            border-radius: 15px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 0;
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+            transition: .5s ease;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.815)
+         }
+         .overlay h4{
+            margin-top: 20%;
+
+         }
+      </style>
+   </head>
+   <body>
+      <!-- SECTION1 -->
+      <div id="grad1">
+         <div class="container1">
+            <nav class="navbar navbar-expand-lg navbar-light" style="position: relative;">
+               <div class="container-fluid">
+                  <span style="margin-left: 1rem;">
+                  <a class="navbar-brand" href="/views/index.html"><img src="image/Logo_png.png" alt="..."></a>
+                  <a class="navbar-brand" href="/views/index.html"><img src="image/Logo_Text.png" alt="..."></a></span>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                     aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin: 2vw;">
+                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="color: blue!important;">
+                        <li class="nav-item">
+                           <a class="nav-link active nav1"style="color: #013758;"  aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link active nav1"style="color: #013758;"  aria-current="page" href="/about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link active nav1" style="color: #013758;"  href="/technology.html">Technology</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link active nav1" style="color: #013758;"  href="/product.html">Product</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link active nav1" style="color: #013758;"   href="/sdg.html">SDG</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link active nav1" style="color: #013758;"  href="/views/blogHtml/articles/blog-index.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link active nav2" style="color: #013758;"   href="/contact.html">Contact</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </nav>
+         </div>
+         <div style="padding: 3vw;">
+            <div class="row hed" style="padding-top: 7vw;">
+               <div class="col-lg-6 col-md-6 col-sm-12 txt mobile-txt">
+                  Reducing Carbon Footprints,
+                  One Hydrogen atom at a
+                  time.
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-12">
+                  <img class="image" src="./image/Banner_Atom (3).png" alt="">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- SECTION2 -->
+      <div class="container" style="background-color: white;">
+         <div data-aos="fade-up" class="row">
+            <div class="col-lg-6 col-sm-12">
+               <img class="image" style="border-radius: 0px 85px 85px 0px;" src="./image/About_2.png" alt="">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 container">
+               <h1 class="texting">About Us </h1>
+               <p class="text1">Team Phrotons is dedicated to harnessing clean energy from the most abundant element in
+                  the universe; Hydrogen. We have developed our in-house Hydrogen Fuel Cell and other supporting
+                  technologies like power management, thermal management systems and composite storage.
+                  With the vision of supporting the Sustainable Development Goals, and having research and development
+                  at our core, we look forward to building professional relationships within and beyond the automotive
+                  industry.
+               </p>
+               <button class="w3-button w3-right w3-green butn">
+                <a style="color: white;" href="/about.html"> Learn more &raquo;</a> </button>
+            </div>
+         </div>
+      </div>
+      <br>
+      <!-- SECTION3 -->
+      <div id="grad2">
+         <div>
+            <h1 class="texting" style="text-align: center;">Technology </h1>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-4 col-md-12 col-sm-12">
+                  <div class="card" style="width: 80%;border-radius: 25px;
+                     height: 97%;">
+                     <div class="flip-card">
+                        <div class="flip-card-inner">
+                           <div class="flip-card-front">
+                              <img src="./image/POWER_HOUSE_HFC_RENDER_4K (2).png" class="flipperImg" alt="Avatar" >
+                              <div class="containerText">
+                                 <h4 class="flipperText">Fuel Cell</h4>
+                              </div>
+                           </div>
+                           <div class="flip-card-back">
+                              <p class="crdt">The most promising emerging green energy source.
+                                 Hydrogen Fuel Cell generates electricity through an electrochemical reaction between stored hydrogen, and the atmospheric oxygen, where the only byproduct is clean water. 
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <br>
+               <div class="col-lg-4 col-md-12 col-sm-12">
+                  <div class="card" style="width: 80%;border-radius: 25px;
+                     height: 97%;">
+                     <div class="flip-card">
+                        <div class="flip-card-inner">
+                           <div class="flip-card-front">
+                              <img src="./image/POWER_HOUSE_POWER_CONTROLLER_RENDER_4K (2).png" class="flipperImg" alt="Avatar" >
+                              <div class="containerText">
+                                 <h4 class="flipperText">Power Control</h4>
+                              </div>
+                           </div>
+                           <div class="flip-card-back">
+                              <p>With great powers comes great responsibilities.
+                                 Our specifically designed Power Control unit manages the entire energy generation and storage unit. 
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-12 col-sm-12">
+                  <div class="card" style="width: 80%;border-radius: 25px;
+                     height: 97%;">
+                     <div class="flip-card">
+                        <div class="flip-card-inner">
+                           <div class="flip-card-front">
+                              <img src="./image/POWER_HOUSE_COOLING_RENDER_4K (2).png" class="flipperImg" alt="Avatar" >
+                              <div class="containerText">
+                                 <h4 class="flipperText">Thermal Management</h4>
+                              </div>
+                           </div>
+                           <div class="flip-card-back">
+                              <p>Ok cool down.
+                                 Thermal management system developed at Phrotons Mobility ensures adequate cooling of the entire system. It can also be used independently in other electronic cooling applications.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-4 col-md-12 col-sm-12">
+                  <div class="card" style="width: 80%;border-radius: 25px;
+                     height: 97%;">
+                     <div class="flip-card">
+                        <div class="flip-card-inner">
+                           <div class="flip-card-front">
+                              <img src="./image/POWER_HOUSE_HYDROCORE_RENDER_4K (3).png" class="flipperImg" alt="Avatar" >
+                              <div class="containerText">
+                                 <h4 class="flipperText">Hydrogen Storage</h4>
+                              </div>
+                           </div>
+                           <div class="flip-card-back">
+                              <p>Store more is at our core.
+                                 Our storage system reduces the storage volume of hydrogen by around 20 times. This serves in developing a compact assembly and hence a lighter system.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-12 col-sm-12">
+                  <div class="card" style="width: 80%;border-radius: 25px;
+                     height: 97%;">
+                     <div class="flip-card">
+                        <div class="flip-card-inner">
+                           <div class="flip-card-front">
+                              <img src="./image/Green hydrogen (2).png" class="flipperImg" alt="Avatar" >
+                              <div class="containerText">
+                                 <h4 class="flipperText">Green Hydrogen</h4>
+                              </div>
+                           </div>
+                           <div class="flip-card-back">
+                              <p>Can we ever have enough green?
+                                 We produce green Hydrogen as part of the National Hydrogen Mission emphasised by PM Modi. This hydrogen fuels the cleanest energy generation systems.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- ============================== -->
+      <br><br>
+      <div class="container" style="background: white;">
+         <div data-aos="fade-up" class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 container ">
+               <h1 class="texting">Why Us</h1>
+               <p class="text1"> We are doing R&D to explore cheap catalyst & we have 2 year cost reduction plan to cut down the cost of technology by 70%
+                  We are certified with UNITAR, UNSIAP, and UNEP for Environmental Sustainable Development Goals
+                  Indicators.
+               </p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+               <img class="image" style="border-radius:85px 0px 0px 85px;" 
+                  src="./image/silhouette-confident-businesspeople (1).jpg" alt="">
+            </div>
+         </div>
+      </div>
+      <br><br>
+      <!-- ================================ -->
+      <!-- Swiper -->
+      <div class="container">
+         <h1 class="texting"style="text-align: center;">Testimonial</h1>
+         <div class="swiper mySwiper" style="background: white;">
+            <div class="swiper-wrapper">
+               <div data-aos="zoom-in-up" class="swiper-slide">
+                  <div class="container-y">
+                     <div class="info">
+                        <p class="info_text">It was literally transformative to discover Phrotons Mobility, who could
+                           help us with thermal management system for our onsite power generation unit 
+                        </p>
+                     </div>
+                     <di class="container__profile">
+                        <div class="overlay">
+                           <h4>overlay text will be show here, please update text</h4>
+                        </div>
+                        <img src="./image/Screenshot_2021-09-01-10-42-00-91_7352322957d4404136654ef4adb64504.jpg"
+                           alt="people" />
+                        <div class="container__profile__text">
+                           <h2 style="color: white;">Shradha Lambate
+                           </h2>
+                           <p><b>Rustee</b></p>
+                        </div>
+                     </di>
+                  </div>
+               </div>
+               <div data-aos="zoom-in-up" class="swiper-slide">
+                  <div class="container-y">
+                     <div class="info">
+                        <p class="info_text">We have had the pleasure to work with Phrotons Mobility for our electric
+                           bike units. Their products and client service is worth appreciating.
+                        </p>
+                     </div>
+                     <di class="container__profile">
+                        <img src="./image/50ce24fbc72443f11672081f50a9464c.jpg" alt="people" />
+                        <div class="container__profile__text">
+                           <h2 style="color: white;">Parvez Patel
+                           </h2>
+                           <p><b>Ezee Bikes, Pune
+                              </b>
+                           </p>
+                        </div>
+                     </di>
+                  </div>
+               </div>
+               <div data-aos="zoom-in-up" class="swiper-slide">
+                  <div class="container-y">
+                     <div class="info">
+                        <p class="info_text">Great energy in the management team. Queries were resolved quickly and
+                           timelines were met every time.
+                        </p>
+                     </div>
+                     <di class="container__profile">
+                        <img src="./image/6af6cf93d71997087b67b209c7b00774.jpg" alt="people" />
+                        <div class="container__profile__text">
+                           <h2 style="color: white;">Lara Madrigal</h2>
+                           <p><b>Client</b></p>
+                        </div>
+                     </di>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <br>
+      <!-- =================footer -->
+      <div
+         style="padding-bottom: 2rem;background: linear-gradient(225.52deg, #03738C 0.45%, #024873 32.22%, #012840 100.47%); ;">
+         <div class="fut">Phrotons Mobility - A Fuel Proof Plan</div>
+         <hr>
+         <div class="container">
+            <div class="row alignment">
+               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" style="color: white;padding: 3vw;">
+                  <div class="fut1" >Contact with
+                     Us
+                  </div>
+                  <br>
+                  <div style="margin: auto;">
+                     <i class="fa fa-facebook-f" style="font-size:24px    ; margin-right: 1vw;">  </i>
+                     <i class="fa fa-twitter" style="font-size:24px;    margin-right: 1vw;">  </i>
+                     <i class="fa fa-instagram" style="font-size:24px ;    margin-right: 1vw;">  </i>
+                  </div>
+               </div>
+               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 pad1">
+                  <div class="fut1" >Contact
+                     Us
+                  </div>
+                  <br>
+                  <div class="fut1">91
+                     -7875504566
+                  </div>
+                  <div class="fut1">91
+                     -9049522690
+                  </div>
+                  <br>
+                  <div class="fut1">Mail
+                     Id
+                  </div>
+                  <div class="fut1"
+                     >contact@phrotons.com
+                  </div>
+                  <div class="fut1">
+                     sales.purchase@phrotons.com
+                  </div>
+               </div>
+               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 fut2" style="padding: 3vw;">
+                  <div class="fut1"
+                     >Address</div>
+                  <div class="fut1" style="color: white;">Ground
+                     Floor, 513, Building 14 (SN 37/2/2B), Mahada Colony, Yashwant Nagar, Kharadi, Pune, Maharashtra
+                     411014
+                  </div>
+               </div>
+               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 pad">
+                  <span class="fut1">Imp
+                  inks</span><br><br>
+                  <span class="fut1"><a href="/about.html"></a>About</span> <br>
+                  <span class="fut1"><a href="/views/technology.html"></a>Technology</span> <br>
+                  <span class="fut1"> <a  href="/views/contact.html"></a> Product</span> <br>
+                  <span class="fut1"><a href="/views/contact.html"></a> SDG</span> <br>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+         AOS.init();
+      </script>
+      </script>
+
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script>
+         var swiper = new Swiper(".mySwiper", {
+             effect: "coverflow",
+             grabCursor: true,
+             centeredSlides: true,
+             slidesPerView: "auto",
+             loop: true,
+             autoplay: {
+                 delay: 3500,
+                 disableOnInteraction: false,
+               
+                 mousewheel: true,
+             },
+             coverflowEffect: {
+                 rotate: 50,
+                 stretch: 0,
+                 depth: 100,
+                 modifier: 1,
+                 slideShadows: false,
+             },
+             pagination: {
+                 el: ".swiper-pagination",
+             },
+        
+         });
+      </script>
+   </body>
+</html>

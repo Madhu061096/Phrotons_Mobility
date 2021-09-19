@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <title>Blog</title>
+
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,500&display=swap"> -->
+<link href="//db.onlinewebfonts.com/c/f867300bdd5bc759c50209b13c385cb1?family=Schluber" rel="stylesheet"
+  type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link href="FontAwesome.css" rel="stylesheet"> -->
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link rel="stylesheet"   href="/css/index.css">
+<link rel="stylesheet"   href="/css/contact.css">
+
+<link href="dm-sans-cufonfonts/DMSans-Bold.ttf">
+<link href="dm-sans-cufonfonts/DMSans-BoldItalic.ttf" >
+<link href="dm-sans-cufonfonts/DMSans-Italic.ttf">
+<link href="dm-sans-cufonfonts/DMSans-Medium.ttf">
+<link href="dm-sans-cufonfonts/DMSans-MediumItalic.ttf">
+<link href="dm-sans-cufonfonts/DMSans-Regular.ttf">
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<!-- <script src='https://kit.fontawesome.com/a076d05399.js'></script> -->
+<!-- ------JAVASCRIPT LINKS-------- -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+  crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+  /* .container-x .info_text {
+  text-align: center;
+  font-family: sans-serif;
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  } */
+  html,
+  body {
+  position: relative;
+  height: 100%;
+  }
+
+  body {
+  /* background: #eee; */
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  }
+
+  .swiper {
+  width: 62%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  }
+
+  @media (max-width: 576px) {
+  .swiper {
+     width: 83%;
+     padding-top: 50px;
+     padding-bottom: 50px;
+  }
+  }
+
+  .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  }
+
+  .swiper-slide img {
+  display: block;
+  width: 100%;
+  }
+
+  .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 40%;
+  height: 50%;
+  object-fit: cover;
+  background-color: white;
+  }
+
+
+  /*flipper css starts here*/
+
+  .flipperImg {
+  width: 100%;
+  background-color: #C5E9FF;
+  border-radius: 25px 25px 0px 0px;
+  }
+
+  .flipperText {
+  padding: 16px;
+  font-family: DM Sans;
+  font-style: normal;
+  font-size: 2vw;
+  line-height: 23px;
+  letter-spacing: -0.603077px;
+  color: #0367A6;
+  }
+
+  @media (max-width: 576px) {
+  .flipperText {
+     font-family: DM Sans;
+     font-style: normal;
+     font-size: 7.3vw;
+     line-height: 23px;
+     letter-spacing: -0.603077px;
+     color: #0367A6;
+  }
+  }
+
+  .flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 27vw;
+  /* border: 1px solid #f1f1f1; */
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+  }
+
+
+  /* This container is needed to position the front and back side */
+
+  .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  }
+
+
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+
+  .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  }
+
+
+  /* Position the front and back side */
+
+  .flip-card-front,
+  .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 27vw;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+  }
+
+
+  /* Style the front side (fallback if image is missing) */
+
+  .flip-card-front {
+  background-color: #fff;
+  color: black;
+  border-radius: 25px;
+  }
+
+
+  /* Style the back side */
+
+  .flip-card-back {
+  background-color: rgba(77, 111, 122, 0.7);
+  transform: rotateY( 180deg);
+  border-radius: 25px;
+  /* text-align: center; */
+  /* align-items: center; */
+  padding: 4vw;
+  font-family: DM Sans;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.2vw;
+  line-height: 2vw;
+  letter-spacing: 0.396923px;
+  color: #FFFFFF;
+  width: 100%;
+  height: 27vw;
+  }
+
+  @media (max-width: 576px) {
+  .flip-card-back {
+     background-color: rgba(77, 111, 122, 0.7);
+     transform: rotateY( 180deg);
+     border-radius: 25px;
+     text-align: center;
+     align-items: center;
+     padding: 4vw;
+     font-family: DM Sans;
+     font-style: italic;
+     font-weight: 500;
+     font-size: 4.8vw;
+     line-height: 8vw;
+     letter-spacing: 0.396923px;
+     color: #FFFFFF;
+     width: 100%;
+     height: 85vw;
+  }
+  }
+
+  @media (max-width: 576px) {
+  .flip-card {
+     background-color: transparent;
+     width: 100%;
+     height: 100vw;
+  }
+  .containerText {
+     background: #fff;
+     background: #fff;
+     border-bottom-left-radius: 25px;
+     border-bottom-right-radius: 25px;
+  }
+  }
+
+  .card {
+  background-color: transparent;
+  box-shadow: none!important;
+  border: none;
+  margin: auto;
+  }
+
+  @media (min-width: 576px) and (max-width: 991px) {
+  .flip-card {
+     height: 80vw;
+  }
+  .flipperText {
+     font-size: 4vw;
+  }
+  .flip-card-back {
+     font-size: 3.5vw;
+     line-height: 6vw;
+     height: 70vw;
+  }
+  .containerText {
+     background: #fff;
+     border-bottom-left-radius: 25px;
+     border-bottom-right-radius: 25px;
+  }
+  }
+
+  .swiper-slide-prev{
+     transform: translate3d(0px, 0px, -200px) rotateX(0deg) rotateY(60deg) scale(0.8) !important;
+  }
+  .swiper-slide-next{
+     transform: translate3d(0px, 0px, -180px) rotateX(0deg) rotateY(-60deg) scale(0.8) !important;
+  }
+
+  .overlay {
+     position: absolute;
+     border-radius: 15px;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     width: 100%;
+     height: 0;
+     color: #fff;
+     text-align: center;
+     overflow: hidden;
+     transition: .5s ease;
+     justify-content: center;
+     background: rgba(0, 0, 0, 0.815)
+  }
+  .overlay h4{
+     margin-top: 20%;
+
+  }
+</style>
+
+
+
+
+
+</head>
+
+<body>
+
+  <!-- New Header -->
+  
+    <!-- SECTION1 -->
+    <div id="grad1">
+      <div class="container1" style="background: #FDFAFA;">
+
+          <nav class="navbar navbar-expand-lg navbar-light " style=" background-color:#FDFAFA;">
+              <div class="container-fluid">
+                  <span style="margin-left: 1rem;">
+                      <a class="navbar-brand" href="/index.html"><img src="image/Logo_png.png" alt="..."></a>
+                      <a class="navbar-brand" href="/index.html"><img src="image/Logo_Text.png" alt="..."></a></span>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                      aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin: 2vw;">
+                      <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="color: blue!important;">
+                          <li class="nav-item">
+                              <a class="nav-link active nav1" style="color: #013758;" aria-current="page"
+                                  href="/index.html">Home</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link active nav1" style="color: #013758;" aria-current="page"
+                                  href="/about.html">About</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link active nav1" style="color: #013758;"
+                                  href="/technology.html">Technology</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link active nav1" style="color: #013758;" href="/product.html">Product</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link active nav1" style="color: #013758;" href="/sdg.html">SDG</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link active nav1" style="color: #013758;" href="/views/blogHtml/articles/blog-index.html">Blog</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link active nav2" style="color: #013758;" href="/contact.html">Contact</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+          <div class="Fut"> <b>Blog</b></div>
+      </div>
+  </div><br>
+  <!-- section blog 1 start -->
+  <div class="container" style="padding:371px 16px">
+    <h1 class="mb-4">Blog Articles</h1>
+    <a href="/views/blogHtml/articles/blog-new.html" class="btn btn-success">New Article</a>
+    <div id="allArticles">
+     
+    </div>
+  </div>
+  <!-- section blog 1 end -->
+
+      <!-- ======================footer======================= -->
+      <div
+         style="padding-bottom: 2rem;background: linear-gradient(225.52deg, #03738C 0.45%, #024873 32.22%, #012840 100.47%); ;">
+         <div class="fut">Phrotons Mobility - A Fuel Proof Plan</div>
+         <hr>
+         <div class="container">
+            <div class="row alignment">
+               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" style="color: white;">
+                  <br> <span class="fut1" >Contact with
+                  Us</span>
+                  <br><br>
+                  <div style="margin: auto;">
+                  <i class="fa fa-facebook-f" style="font-size:24px    ; margin-right: 1vw;">  </i>
+                  <i class="fa fa-twitter" style="font-size:24px;    margin-right: 1vw;">  </i>
+                  <i class="fa fa-instagram" style="font-size:24px ;    margin-right: 1vw;">  </i>
+
+                  </div>
+                  <!-- <a href=""><img class="s-icon" src="" /></a> -->
+                  <!-- <a href=""><img class="s-icon" style="margin-left: 1rem;" src="/Image/Twitter.png" /></a>
+                  <a href=""><img class="s-icon" style="margin-right: 1rem;" src="/Image/Instagram.png" /></a> -->
+               </div>
+               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                  <br> <span class="fut1" >Contact
+                  Us</span><br>
+                  <br> <span class="fut1">91
+                  -7875504566</span>
+                  <br> <span class="fut1">91
+                  -9049522690</span><br>
+                  <br> <span class="fut1">Mail
+                  Id</span>
+                  <br> <span class="fut1"
+                    >contact@phrotons.com
+                  </span>
+                  <br> <span class="fut1">
+                  sales.purchase@phrotons.com
+                  </span>
+               </div>
+               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                  <br> <span class="fut1"
+                    >Address</span><br>
+                  <br> <span style="color: white;">Ground
+                  Floor, 513, Building 14 (SN 37/2/2B), Mahada Colony, Yashwant Nagar, Kharadi, Pune, Maharashtra
+                  411014</span>
+               </div>
+               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 pad">
+                <span class="fut1">Imp
+                inks</span><br><br>
+                <span class="fut1"><a href="/about.html"></a>About</span> <br>
+                <span class="fut1"><a href="/views/technology.html"></a>Technology</span> <br>
+                <span class="fut1"> <a  href="/views/contact.html"></a> Product</span> <br>
+                <span class="fut1"><a href="/views/contact.html"></a> SDG</span> <br>
+             </div>
+            </div>
+         </div>
+      </div>
+</body>
+<script>
+  function allblog() {
+    $.get('/allblogs', function (data) {
+      console.log(data);
+      getAllBlogsData(data);
+    })
+  }
+  function getAllBlogsData(blogdata){
+    blogdata.forEach(element => {
+      $("#allArticles").append('<div style="margin:0px" class="card col-lg-12 col-md-4 col-sm-12">' +
+        '<div style="height: 100%;width: 70vw; padding: none; margin: 5vw;" class="card-body">' +
+        '<h4 class="card-title">' + element.title + '</h4>' +
+
+        '<div class="card-subtitle text-muted mb-2">' +
+        element.createdAt +
+        '</div>' +
+      '   <img src="'+
+        element.img
+      +'" class="rounded-square" style="width: 50%; height: 50%;">'+
+      
+   '     <div class="card-subtitle text-muted mb-2" id="subtitle">'+ element.subTitle +
+        '  </div>'+
+        '<div style="font-size:2vw" class="card-text mb-2">' + element.description + '</div>' +
+        '<a href="./views/blogHtml/articles/blog-show.html?' + element._id + '" class="btn btn-primary">Read More</a>' +
+        '<a href="./views/blogHtml/articles/blog-edit.html?' + element._id + '" class="btn btn-info">Edit</a>' +
+        ' <button type="submit" class="btn btn-danger" onClick="deleteBlog(\'' + element._id + '\')">Delete</button>' +
+        '</div>' +
+        '</div>')
+    });
+  }
+  function deleteBlog(blogID){
+    //deleteBlog with id blogId
+    console.log('blog id', blogID)
+    var settings = {
+      "url": "/blogs/" + blogID,
+      "method": "DELETE",
+      "timeout": 0,
+      "headers": {
+      "Content-Type": "application/json"
+      }
+    };
+
+    $.ajax(settings).done(function (response) {
+      console.log(response);
+      // location.reload();
+      $("#allArticles").empty();
+      allblog()
+    });
+  }
+  $(document).ready(function () {
+     // getAllBlogsData();
+    allblog();
+   })
+</script>
+</html>
